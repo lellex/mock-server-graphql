@@ -1,12 +1,10 @@
 import {
-    myLittleTypes
+    devices
 } from './dataSource';
 
 const rootResolvers = {
     Query: {
-        myLittleType: (_, {
-            id
-        }) => myLittleTypes.find(t => t.id === id)
+        getDevices: () => devices
     },
 };
 

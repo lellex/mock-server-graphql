@@ -14,7 +14,7 @@ import {
 import {
     schema as myLittleTypoSchema,
     resolvers as myLittleTypeResolvers
-} from './myLittleDomain';
+} from './device';
 
 import {
     merge

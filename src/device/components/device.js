@@ -1,5 +1,6 @@
 export default `
-  type MyLittleType {
+  type Device {
     id: Int!
     description: String
-}`
+  }
+`

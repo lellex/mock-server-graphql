@@ -23,12 +23,8 @@ server.use('/graphiql', graphiqlExpress({
     query: `# Welcome to GraphiQL
 
 query PostsForAuthor {
-  author(id: 1) {
-    firstName
-    posts {
-      title
-      votes
-    }
+  getDevices {
+    id
   }
 }`
 }));
