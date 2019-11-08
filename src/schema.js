@@ -17,8 +17,8 @@ const schema = [
     `
     type Query {
         domain: String,
-        getDevices: [Device]
-        getUsers: [User]
+        getDevices(first: Int): [Device]
+        getUsers(first: Int): [User]
     }
     type Mutation {
         domain: String

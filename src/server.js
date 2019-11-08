@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-//import graphqlExpress from 'express-graphql';
 import {
     graphqlExpress,
     graphiqlExpress
@@ -18,7 +17,6 @@ server.use('/graphql', cors(), bodyParser.json(), graphqlExpress(request => ({
   context: {
     user: request.user
   }
-  //context: context(request.headers, process.env),
 })));
 
 server.use('/graphiql', graphiqlExpress({

@@ -2,6 +2,7 @@ import casual from 'casual';
 
 export default {
     Int: () => casual.integer(0),
+    String: () => casual.uuid,
     Device: () => ({
         thingArn: `arn:aws:iot:us-east-1:458788200426:thing/${casual.integer(10000, 10000000000)}`,
         attributes: JSON.stringify({
@@ -11,10 +12,15 @@ export default {
             app_id: casual.uuid,
             appkey: casual.random_key,
             billing_group: 'Free',
-            device_type: 'Development',
+            device_type: casual.random_element([
+                'Tracking',
+                'Development'
+            ]),
             manufacturer: casual.random_element([
                 'Digital Matter',
-                'Multitech'
+                'Multitech',
+                'Pycom',
+                'Rak Wireless'
             ]),
             model: casual.random_element([
                 'mDot',
