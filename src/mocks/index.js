@@ -1,10 +1,15 @@
 import casual from 'casual';
+import { MockList } from 'graphql-tools';
 
 export default {
+    Query: () => ({
+        getDevices: () => new MockList(5),
+    }),
     Int: () => casual.integer(0),
     String: () => casual.uuid,
     Device: () => ({
         thingArn: `arn:aws:iot:us-east-1:458788200426:thing/${casual.integer(10000, 10000000000)}`,
+        version: casual.integer(1, 2),
         attributes: JSON.stringify({
             account: casual.email,
             account_id: casual.uuid,
