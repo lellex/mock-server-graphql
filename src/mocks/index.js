@@ -1,29 +1,35 @@
 import casual from 'casual';
-import RandExp from 'randexp';
-import {
-    MockList
-} from 'graphql-tools';
-import {
-    startCase
-} from 'lodash';
-
 
 export default {
     Int: () => casual.integer(0),
-
-    Author: () => ({
-        firstName: casual.first_name,
-        posts: () => new MockList([1, 7]),
-        books: () => new MockList([0, 5])
-    }),
-
-    Post: () => ({
-        title: casual.title
-    }),
-
-    Book: () => ({
-        ISBN: new RandExp(/ISBN-\d-\d{3}-\d{5}-\d/)
-            .gen(),
-        title: startCase(casual.title)
+    Device: () => ({
+        thingArn: `arn:aws:iot:us-east-1:458788200426:thing/${casual.integer(10000, 10000000000)}`,
+        attributes: JSON.stringify({
+            account: casual.email,
+            account_id: casual.uuid,
+            activation: 'OTAA',
+            app_id: casual.uuid,
+            appkey: casual.random_key,
+            billing_group: 'Free',
+            device_type: 'Development',
+            manufacturer: casual.random_element([
+                'Digital Matter',
+                'Multitech'
+            ]),
+            model: casual.random_element([
+                'mDot',
+                'Oyster 4G',
+                'Oyster LoRaWAN'
+            ]),
+            name: casual.random_element([
+                'Test 2',
+                'Oyster 4G',
+            ]),
+            network: casual.random_element([
+                'Test 2',
+                'Oyster 4G',
+                'mDot-D073'
+            ])
+        })
     })
 }

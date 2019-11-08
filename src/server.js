@@ -11,18 +11,17 @@ import schema from './schema';
 
 const PORT = 3000;
 const server = express();
-const graphiql = true;
 
 server.use('/graphql', bodyParser.json(), graphqlExpress(request => ({
-    schema,
-    //context: context(request.headers, process.env),
+  schema,
+  //context: context(request.headers, process.env),
 })));
 
 server.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql',
     query: `# Welcome to GraphiQL
 
-query PostsForAuthor {
+query Query {
   getDevices {
     id
   }

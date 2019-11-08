@@ -1,6 +1,11 @@
 export default `
+  scalar AWSJSON
+
   type Device {
-    id: Int!
-    description: String
+    id: ID!
+    thingName: String
+    thingArn: String
+    version: Int
+    attributes: String
   }
 `

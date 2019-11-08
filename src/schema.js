@@ -7,13 +7,8 @@ import {
 } from 'graphql-tools';
 
 import {
-    schema as authorpostsSchema,
-    resolvers as authorpostsResolvers
-} from './authorposts';
-
-import {
-    schema as myLittleTypoSchema,
-    resolvers as myLittleTypeResolvers
+    schema as kageTypoSchema,
+    resolvers as kageTypesResolvers
 } from './device';
 
 import {
@@ -37,11 +32,11 @@ const baseSchema = [
 ]
 
 // Put schema together into one array of schema strings and one map of resolvers, like makeExecutableSchema expects
-const schema = [...baseSchema, ...authorpostsSchema, ...myLittleTypoSchema]
+const schema = [...baseSchema, ...kageTypoSchema]
 
 const options = {
     typeDefs: schema,
-    resolvers: merge(authorpostsResolvers, myLittleTypeResolvers)
+    resolvers: merge(kageTypesResolvers)
 }
 
 const executableSchema = makeExecutableSchema(options);
