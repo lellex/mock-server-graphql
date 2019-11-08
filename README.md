@@ -6,7 +6,7 @@ This project goal is to run a local server for mocking Kage API.
 
 ### Installation
 
-Run these command to install dependencies and start the server:
+Run these commands to install dependencies and start the server:
 
 ```bash
 npm install
