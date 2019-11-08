@@ -24,7 +24,7 @@ server.use('/graphiql', graphiqlExpress({
     query: `# Welcome to GraphiQL
 
 query getDevices {
-  data: getDevices {
+  data: getDevices(first: 5) {
     id
     thingArn
     thingName

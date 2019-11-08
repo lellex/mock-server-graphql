@@ -3,7 +3,7 @@ import { MockList } from 'graphql-tools';
 
 export default {
     Query: () => ({
-        getDevices: () => new MockList(5),
+        getDevices: (root, { first }) => new MockList(first),
     }),
     Int: () => casual.integer(0),
     String: () => casual.uuid,
