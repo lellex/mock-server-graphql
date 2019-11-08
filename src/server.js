@@ -36,6 +36,14 @@ server.use('/graphiql', graphiqlExpress({
         thingName
         version
         attributes
+      },
+      deviceLogs: getDeviceLogs {
+        id,
+        message {
+          dev_eui
+          payload
+          request_type
+        }
       }
     }
 `

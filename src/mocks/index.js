@@ -5,6 +5,7 @@ export default {
     Query: () => ({
         getDevices: (root, { first = 5 }) => new MockList(first),
         getUsers: (root, { first = 5 }) => new MockList(first),
+        getDeviceLogs: (root, { first = 5 }) => new MockList(first),
     }),
     Int: () => casual.integer(0),
     String: () => casual.uuid,
@@ -49,5 +50,13 @@ export default {
                 'mDot-D073'
             ])
         })
-    })
+    }),
+    DeviceLog: () => ({
+        id: casual.uuid,
+        message: {
+            dev_eui: casual.uuid,
+            payload: casual.uuid,
+            request_type: 'GET',
+        }
+    })   
 }
