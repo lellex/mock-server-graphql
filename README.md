@@ -1,16 +1,15 @@
-# Posts and Authors example from graphql-tools docs
+# Kage API mock server
 
 Forked from [graphql_authors_mock](https://github.com/JeffML/graphql_authors_mock) created by Apollo Team.
 
-This project was created with [Apollo Launchpad](https://launchpad.graphql.com)
+This project goal is to run a local server for mocking Kage API.
 
-You can see the original pad at [https://launchpad.graphql.com/1jzxrj179](https://launchpad.graphql.com/1jzxrj179)
+### Installation
 
-### Quick start guide
+Run these command to install dependencies and start the server:
 
 ```bash
 npm install
-
 npm start
 ```
 
