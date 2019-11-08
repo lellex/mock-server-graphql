@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 //import graphqlExpress from 'express-graphql';
 import {
     graphqlExpress,
@@ -12,8 +13,11 @@ import schema from './schema';
 const PORT = 3000;
 const server = express();
 
-server.use('/graphql', bodyParser.json(), graphqlExpress(request => ({
+server.use('/graphql', cors(), bodyParser.json(), graphqlExpress(request => ({
   schema,
+  context: {
+    user: request.user
+  }
   //context: context(request.headers, process.env),
 })));
 
@@ -21,9 +25,13 @@ server.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql',
     query: `# Welcome to GraphiQL
 
-query Query {
-  getDevices {
+query getDevices {
+  data: getDevices {
     id
+    thingArn
+    thingName
+    version
+    attributes
   }
 }`
 }));

@@ -6,21 +6,19 @@ import {
     addMockFunctionsToSchema
 } from 'graphql-tools';
 
-import {
-    schema as kageTypoSchema,
-    resolvers as kageTypesResolvers
-} from './device';
+import mocks from './mocks';
 
-import {
-    merge
-} from 'lodash';
+import Device from './device/components/device';
+import User from './user/components/user';
+import { devices } from './device/dataSource';
+import { users } from './user/dataSource';
 
-import mocks from './mocks'
-
-const baseSchema = [
+const schema = [
     `
     type Query {
-        domain: String
+        domain: String,
+        getDevices: [Device]
+        getUsers: [User]
     }
     type Mutation {
         domain: String
@@ -28,15 +26,20 @@ const baseSchema = [
     schema {
         query: Query,
         mutation: Mutation
-    }`
+    }
+    `,
+    Device,
+    User
 ]
-
-// Put schema together into one array of schema strings and one map of resolvers, like makeExecutableSchema expects
-const schema = [...baseSchema, ...kageTypoSchema]
 
 const options = {
     typeDefs: schema,
-    resolvers: merge(kageTypesResolvers)
+    resolvers: {
+        Query: {
+            getDevices: () => devices,
+            getUsers: () => users,
+        },
+    }
 }
 
 const executableSchema = makeExecutableSchema(options);
