@@ -13,6 +13,8 @@ npm install
 npm start
 ```
 
+Then you can use Graphiql to test mock API at `http://localhost:3000/graphiql`.
+
 ### Usage with kage templates
 
 Once the server is on, in `.env` file, replace the `APPSYNC_URL` variable by `localhost:3000`
@@ -29,4 +31,12 @@ For React template:
 ```
 # REACT_APP_APPSYNC_URL=https://xxx.appsync-api.us-east-1.amazonaws.com/graphql
 REACT_APP_APPSYNC_URL=http://localhost:3000/graphql
+```
+
+### Methods
+
+The functions `getUsers` and `getDevices` can take a `first` parameters which determine how many items we want.
+
+```
+getDevices(first: 10) // Will return 10 items
 ```

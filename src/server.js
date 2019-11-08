@@ -23,15 +23,22 @@ server.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql',
     query: `# Welcome to GraphiQL
 
-query getDevices {
-  data: getDevices(first: 5) {
-    id
-    thingArn
-    thingName
-    version
-    attributes
-  }
-}`
+    query mock {
+      users: getUsers {
+        email,
+        given_name,
+        family_name,
+        phone_number
+      },
+      devices: getDevices {
+        id
+        thingArn
+        thingName
+        version
+        attributes
+      }
+    }
+`
 }));
 
 server.listen(PORT, () => {

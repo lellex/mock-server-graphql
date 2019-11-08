@@ -3,10 +3,17 @@ import { MockList } from 'graphql-tools';
 
 export default {
     Query: () => ({
-        getDevices: (root, { first }) => new MockList(first),
+        getDevices: (root, { first = 5 }) => new MockList(first),
+        getUsers: (root, { first = 5 }) => new MockList(first),
     }),
     Int: () => casual.integer(0),
     String: () => casual.uuid,
+    User: () => ({
+        email: casual.email,
+        given_name: casual.first_name,
+        family_name: casual.last_name,
+        phone_number: casual.phone,
+    }),
     Device: () => ({
         thingArn: `arn:aws:iot:us-east-1:458788200426:thing/${casual.integer(10000, 10000000000)}`,
         version: casual.integer(1, 2),
