@@ -25,6 +25,9 @@ export default {
             app_id: casual.uuid,
             appkey: casual.random_key,
             billing_group: 'Free',
+            lat: -37.19903579774566,
+            lng: 174.90396228659873,
+            batV: casual.integer(0, 100),
             device_type: casual.random_element([
                 'Tracking',
                 'Development'

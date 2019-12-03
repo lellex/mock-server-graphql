@@ -1,0 +1,140 @@
+##################################################################
+# Created by    : Adamson dela Cruz
+# Date Created  : 14/01/19
+# Remarks       : Appsync Schema definition
+##################################################################
+​
+schema {
+	query: Query
+	mutation: Mutation
+}
+########################################################################
+# TYPES
+########################################################################
+type Device {
+	id: ID!
+	thingName: String
+	thingArn: String
+	version: Int
+	attributes: AWSJSON
+}
+​
+type DeviceLog {
+	id: ID!
+	message: Log
+}
+​
+type Gateway {
+	id: ID!
+	name: String
+	description: String
+	frequency_plan: String
+	enforce_duty_cycle: String
+	networkId: String
+}
+​
+type Log {
+	dev_eui: String
+	payload: String
+	request_type: String
+}
+​
+type IotApplication {
+	id: ID!
+	name: String
+	description: String
+	category: String
+	client: String
+	client_website: String
+	client_contact_email: String
+	client_contact_number: String
+	template_id: String
+	date_stamp: String
+	account: String
+}
+​
+type User {
+	email: ID!
+	given_name: String
+	family_name: String
+	phone_number: String
+}
+########################################################################
+# QUERIES AND MUTATION
+########################################################################
+type Mutation {
+	# creates an iot application
+	createIotApplication(input: createIotApplicationInput): ID
+	createDevice(input: deviceInput): ID
+	createCellularDevice(input: cellularDeviceInput): ID
+	createUser(input: createUserInput): ID
+	createGateway(input: gatewayInput): ID
+	updateDevice(input: deviceInput): ID
+}
+​
+type Query {
+	# Returns all iot applications by account.	
+	getIotApplications: [IotApplication]
+	getIotApplication(account: String!, id: ID!): IotApplication
+	getDevices: [Device]
+	getDeviceLogs: [DeviceLog]
+	getUsers: [User]
+	getTemplateUrl(template: String): String
+}
+​
+########################################################################
+# INPUT
+########################################################################
+input createIotApplicationInput {
+	id: ID!
+	name: String
+	description: String
+	category: String
+	client: String
+	client_website: String
+	client_contact_email: String
+	client_contact_number: String
+	template_id: String
+	date_stamp: String
+	account: String
+	account_id: String
+}
+​
+input deviceInput {
+	id: ID!
+	name: String
+	activation: String
+	category: String
+	appeui: String
+	appkey: String
+	app_id: String
+	manufacturer: String
+	model: String
+	device_type: String
+}
+​
+input cellularDeviceInput {
+	id: ID!
+	name: String
+	app_id: String
+	manufacturer: String
+	model: String
+	network: String
+	networks: String
+}
+​
+input createUserInput {
+	email: ID!
+	given_name: String
+	family_name: String
+	phone_number: String
+}
+​
+input gatewayInput {
+	id: ID!
+	name: String
+	description: String
+	frequency_plan_id: String
+	enforce_duty_cycle: String
+	network_id: String
+}
