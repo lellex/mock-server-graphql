@@ -27,5 +27,15 @@
   "activation_method": "Méthode d'activation",
   "manufacturer": "Fabricant",
   "model": "Modèle",
-  "device_type": "Type de prériphérique"
+  "device_type": "Type de prériphérique",
+  "N/A": "NC",
+  "lng": "Lng",
+  "lat": "Lat",
+  "all_rights_reserved": "Tous droits réservés",
+  "profile": "Profil",
+  "first_name": "Prénom",
+  "family_name": "Nom",
+  "email_address": "Adresse email",
+  "phone_number": "Téléphone",
+  "save": "Sauvegarder"
 }
