@@ -1,0 +1,12 @@
+{
+  "message": "Message",
+  "message_plural": "Messages",
+  "active_device": "Active device",
+  "active_device_plural": "Active devices",
+  "alert": "Alert",
+  "alert_plural": "Alerts",
+  "uplink": "Uplink",
+  "join": "Join",
+  "lng": "Lng",
+  "lat": "Lat"
+}

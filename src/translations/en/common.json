@@ -1,0 +1,15 @@
+{
+  "help": "Help",
+  "my_dashboard": "My Dashboard",
+  "dashboard": "Dashboard",
+  "tracking": "Tracking",
+  "iot_devices": "IOT Devices",
+  "N/A": "N/A",
+  "all_rights_reserved": "All Rights Reserved",
+  "profile": "Profile",
+  "first_name": "First Name",
+  "family_name": "Family Nom",
+  "email_address": "Email Address",
+  "phone_number": "Phone number",
+  "save": "Save"
+}

@@ -1,0 +1,16 @@
+{
+  "help": "Aide",
+  "my_dashboard": "Tableau de bord",
+  "dashboard": "Tableau de bord",
+  "tracking": "Géolocalisation",
+  "iot_devices": "Périphériques IOT",
+  "reload": "Actualiser",
+  "N/A": "NC",
+  "all_rights_reserved": "Tous droits réservés",
+  "profile": "Profil",
+  "first_name": "Prénom",
+  "family_name": "Nom",
+  "email_address": "Adresse email",
+  "phone_number": "Téléphone",
+  "save": "Sauvegarder"
+}

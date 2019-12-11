@@ -5,6 +5,7 @@ import {
     graphiqlExpress
 } from 'graphql-server-express';
 import bodyParser from 'body-parser';
+import path from 'path';
 
 import schema from './schema';
 
@@ -51,17 +52,7 @@ server.use('/graphiql', graphiqlExpress({
 `
 }));
 
-server.get('/translations/fr', (req, res) => {
-  const data = require('./translations/fr.json');
-  res.header("Content-Type",'application/json');
-  res.send(JSON.stringify(data));
-});
-
-server.get('/translations/en', (req, res) => {
-  const data = require('./translations/en.json');
-  res.header("Content-Type",'application/json');
-  res.send(JSON.stringify(data));
-});
+server.use('/translations', express.static(path.join(__dirname, '/translations')));
 
 server.listen(PORT, () => {
   console.log(`GraphQL Server is now running on http://localhost:${PORT}/graphql`);

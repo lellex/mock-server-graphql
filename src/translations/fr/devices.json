@@ -1,0 +1,13 @@
+{
+  "devices": "Périphériques",
+  "no_devices": "Aucun périphérique",
+  "all_devices": "Tous les périphériques",
+  "battery": "Batterie",
+  "location": "Géolocalisation",
+  "deveui": "DEVEUI",
+  "device_name": "Nom du périphérique",
+  "activation_method": "Méthode d'activation",
+  "manufacturer": "Fabricant",
+  "model": "Modèle",
+  "device_type": "Type de prériphérique"
+}

@@ -1,0 +1,15 @@
+
+{
+  "devices": "Devices",
+  "no_devices": "No devices",
+  "reload": "Actualiser",
+  "all_devices": "All Devices",
+  "battery": "Battery",
+  "location": "Location",
+  "deveui": "DEVEUI",
+  "device_name": "Device name",
+  "activation_method": "Activation method",
+  "manufacturer": "Manufacturer",
+  "model": "Model",
+  "device_type": "Device type"
+}
