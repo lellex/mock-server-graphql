@@ -1,9 +1,11 @@
 {
+  "logout": "Logout",
   "help": "Help",
   "my_dashboard": "My Dashboard",
   "dashboard": "Dashboard",
   "tracking": "Tracking",
   "iot_devices": "IOT Devices",
+  "reload": "Actualiser",
   "N/A": "N/A",
   "all_rights_reserved": "All Rights Reserved",
   "profile": "Profile",
