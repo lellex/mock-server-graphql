@@ -6,7 +6,5 @@
   "alert": "Alert",
   "alert_plural": "Alerts",
   "uplink": "Uplink",
-  "join": "Join",
-  "lng": "Lng",
-  "lat": "Lat"
+  "join": "Join"
 }

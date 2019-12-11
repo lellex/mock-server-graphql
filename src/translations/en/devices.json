@@ -5,6 +5,8 @@
   "all_devices": "All Devices",
   "battery": "Battery",
   "location": "Location",
+  "lng": "Lng",
+  "lat": "Lat",
   "deveui": "DEVEUI",
   "device_name": "Device name",
   "activation_method": "Activation method",

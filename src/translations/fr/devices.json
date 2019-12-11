@@ -4,6 +4,8 @@
   "all_devices": "Tous les périphériques",
   "battery": "Batterie",
   "location": "Géolocalisation",
+  "lng": "Lng",
+  "lat": "Lat",
   "deveui": "DEVEUI",
   "device_name": "Nom du périphérique",
   "activation_method": "Méthode d'activation",
