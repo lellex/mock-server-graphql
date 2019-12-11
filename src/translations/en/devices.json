@@ -12,5 +12,7 @@
   "activation_method": "Activation method",
   "manufacturer": "Manufacturer",
   "model": "Model",
-  "device_type": "Device type"
+  "device_type": "Device type",
+  "profile": "Profile",
+  "history": "History"
 }

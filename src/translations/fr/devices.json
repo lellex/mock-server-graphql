@@ -11,5 +11,7 @@
   "activation_method": "Méthode d'activation",
   "manufacturer": "Fabricant",
   "model": "Modèle",
-  "device_type": "Type de prériphérique"
+  "device_type": "Type de prériphérique",
+  "profile": "Profil",
+  "history": "Historique"
 }
