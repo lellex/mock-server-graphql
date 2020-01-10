@@ -14,5 +14,6 @@
   "model": "Model",
   "device_type": "Device type",
   "profile": "Profile",
-  "history": "History"
+  "history": "History",
+  "select_device": "Select Device"
 }

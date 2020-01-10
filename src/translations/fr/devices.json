@@ -13,5 +13,6 @@
   "model": "Modèle",
   "device_type": "Type de prériphérique",
   "profile": "Profil",
-  "history": "Historique"
+  "history": "Historique",
+  "select_device": "Sélectionner un périphérique"
 }
